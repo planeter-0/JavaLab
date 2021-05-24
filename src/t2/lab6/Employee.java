@@ -36,7 +36,7 @@ public class Employee {
     private static int lastEmployeeID = 1000;
 
     public Employee() {
-        employeeID=lastEmployeeID+1;
+        employeeID = lastEmployeeID + 1;
         lastEmployeeID++;
     }
 

@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * @author Planeter
@@ -15,15 +16,36 @@ import java.util.ArrayList;
 public class SortMovie {
     public static void main(String[] args) {
         Movie[] movies = toMovieArr(movieReader());
-        ReleaseYearBubbleSort(movies);
-        DESCReleaseYearBubbleSort(movies);
-        RatingBubbleSort(movies);
-        DESCRatingBubbleSort(movies);
-        NameBubbleSort(movies);
-        DESCNameBubbleSort(movies);
-        System.out.println("end");
+        Scanner in = new Scanner(System.in);
+        switch(in.next()){
+            case "release asc" :
+                ReleaseYearBubbleSort(movies);
+                break;
+            case "release desc" :
+                DESCReleaseYearBubbleSort(movies);
+                break;
+            case "rating asc" :
+                RatingBubbleSort(movies);
+                break;
+            case "rating desc" :
+                DESCRatingBubbleSort(movies);
+                break;
+            case "name asc" :
+                NameBubbleSort(movies);
+                break;
+            case "name desc" :
+                DESCNameBubbleSort(movies);
+                break;
+            default :
+                System.out.println("Invalid");
+        }
+        movieArrPrinter(movies);
     }
-
+    public static void movieArrPrinter(Movie[] movies){
+        for (int i = 0;i<movies.length;i++){
+            movies[i].printMovieDetails();
+        }
+    }
     public static void NameBubbleSort(Movie[] movies) {
         // initial
         String[] names = new String[movies.length];

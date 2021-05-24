@@ -1,5 +1,7 @@
 package t2.lab6;
 
+import java.util.Scanner;
+
 /**
  * @author Planeter
  * @description: TODO
@@ -8,9 +10,10 @@ package t2.lab6;
  */
 public class BinarySearch {
     public static void main(String[] args) {
-        int x = 1;
-        int y = 10;
-        int n = 7;
+        Scanner in = new Scanner(System.in);
+        int x = in.nextInt();
+        int y = in.nextInt();
+        int n = in.nextInt();
         binarySearch(x, y, n);
     }
 

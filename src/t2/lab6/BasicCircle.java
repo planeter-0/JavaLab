@@ -11,9 +11,9 @@ import java.util.Scanner;
 class TestBasicCircle {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        BasicCircle c1 = new BasicCircle(5);
-        BasicCircle c2 = new BasicCircle(7);
-        BasicCircle c3 = new BasicCircle(3);
+        BasicCircle c1 = new BasicCircle(in.nextDouble());
+        BasicCircle c2 = new BasicCircle(in.nextDouble());
+        BasicCircle c3 = new BasicCircle(in.nextDouble());
         System.out.println("Circle 1 has a radius of " + c1.getRadius());
         System.out.println("Circle 2 has a radius of " + c2.getRadius());
         System.out.println("Circle 3 has a radius of " + c3.getRadius());
